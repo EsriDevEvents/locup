@@ -20,6 +20,7 @@ if __name__ == '__main__':
     sample_points[0].x = 1
     sample_points[0].y = 1
 
+    # Modify another point
     sample_points[1].x = 2
     sample_points[1].y = 2
 

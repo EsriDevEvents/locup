@@ -8,9 +8,9 @@
             "name": "Py MEM",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/src/python/run_memory.py",
+            "program": "${workspaceFolder}/src/python/src/run_memory.py",
             "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}/src/python"
+            "cwd": "${workspaceFolder}/src/python/src"
         }
     ]
 }

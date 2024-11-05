@@ -16,6 +16,10 @@
 # Mono auto generated files
 mono_crash.*
 
+# Rust files
+Cargo.lock
+[Tt]arget/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
