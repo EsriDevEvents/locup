@@ -45,12 +45,32 @@ mod tests {
             .unwrap();
         
         let res = client.within_extent(params);
-        assert!(res.is_ok());
-        let places_results = res.unwrap();
-        let results = places_results.results.into_iter();
-        for result in results {
-            // Process each result
-            println!("{:?}", result);
+        const USE_UNWRAP: bool = true;
+
+        if USE_UNWRAP {
+            // Using unwrap and ensure not panicking!
+            assert!(res.is_ok());
+            let places_results = res.unwrap();
+            let results = places_results.results.into_iter();
+            for result in results {
+                // Process each result
+                println!("{:?}", result);
+            }
+        }
+        else {
+            // Use pattern matching
+            match res {
+                Ok(places_results) => {
+                    let results = places_results.results.into_iter();
+                    for result in results {
+                        // Process each result
+                        println!("{:?}", result);
+                    }
+                }
+                Err(err) => {
+                    eprintln!("Error: {:?}", err);
+                }
+            }
         }
     }
 }
