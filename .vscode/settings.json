@@ -1,6 +1,8 @@
 {
     "rust-analyzer.linkedProjects": [
         "src/rust/memory/Cargo.toml",
-        "src/rust/concurrency/Cargo.toml"
+        "src/rust/concurrency/Cargo.toml",
+        "src/rust/location/Cargo.toml",
+        "src/rust/places/Cargo.toml"
     ]
 }
