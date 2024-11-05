@@ -46,5 +46,11 @@ mod tests {
         
         let res = client.within_extent(params);
         assert!(res.is_ok());
+        let places_results = res.unwrap();
+        let results = places_results.results.into_iter();
+        for result in results {
+            // Process each result
+            println!("{:?}", result);
+        }
     }
 }
