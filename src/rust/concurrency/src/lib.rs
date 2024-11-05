@@ -44,7 +44,7 @@ mod tests {
         // Create a vector to hold the thread handles
         let mut handles = vec![];
 
-        for index in 0..5 {
+        for index in 0..count {
             // Clone the Arc to share ownership with the new thread
             let points_list = Arc::clone(&points_list);
     
