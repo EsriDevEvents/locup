@@ -1,14 +1,11 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+#![allow(unused_imports)]
+#![allow(clippy::too_many_arguments)]
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+extern crate serde_repr;
+extern crate serde;
+extern crate serde_json;
+extern crate url;
+extern crate reqwest;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub mod apis;
+pub mod models;
