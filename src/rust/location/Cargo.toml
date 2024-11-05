@@ -3,8 +3,6 @@ name = "location"
 version = "2.4.7"
 authors = ["OpenAPI Generator team and contributors"]
 description = "The basemap styles service provides global basemap layers in a variety of styles to use in mapping applications. Basemap layers give geographic context to a map or scene by serving static tiles containing geographic reference data. This data includes, but is not limited to, topographic features, road networks, footpaths, building footprints, water features, administrative boundaries, and localized language place labels. The JSON structure of a basemap style can be returned as the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/) or the Esri [Web Map Specification](https://developers.arcgis.com/web-map-specification/)."
-# Override this license by providing a License Object in the OpenAPI.
-license = "Unlicense"
 edition = "2021"
 
 [dependencies]
