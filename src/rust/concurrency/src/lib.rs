@@ -72,7 +72,8 @@ mod tests {
 
         // Assert the coordinates of the first point
         assert!(points[0].x == 1.0 && points[0].y == 1.0, "The first point was modified!");
-        // Explain borrowing
+        // Explain borrowing and ownership
+        // https://doc.rust-lang.org/stable/book/ch04-01-what-is-ownership.html
         //assert!(sample_points[0].x == 1.0 && sample_points[0].y == 1.0, "The first point was modified!");
     }
 }
