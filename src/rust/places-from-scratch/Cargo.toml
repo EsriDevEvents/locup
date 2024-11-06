@@ -1,0 +1,8 @@
+[package]
+name = "places-from-scratch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = "0.12.9"
+tokio = { version = "1.41.0", features = ["macros", "rt-multi-thread"] }
