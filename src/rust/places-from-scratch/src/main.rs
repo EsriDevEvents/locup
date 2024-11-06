@@ -1,13 +1,16 @@
-use std::env;
+use std::{collections::HashMap, env};
 
 async fn get_request_body() -> Result<String, Box<dyn std::error::Error>> {
     let client = reqwest::Client::builder().build()?;
 
-    let token = env::var("TOKENNN")?;
+    let token = env::var("TOKEN")?;
 
-    let url = format!("https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/places/near-point?x=174.778&y=-41.292&pageSize=20&f=pjson&token={token}");
-
-    let request = client.request(reqwest::Method::GET, url);
+    let mut params = HashMap::new();
+    params.insert("x", "174.778");
+    params.insert("y", "-41.292");
+    params.insert("pageSize", "20");
+    params.insert("f", "pjson");
+    let request = client.get("https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/places/near-point").query(&params).bearer_auth(token);
 
     let response = request.send().await?;
     Ok(response.text().await?)
