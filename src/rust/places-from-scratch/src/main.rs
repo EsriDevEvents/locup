@@ -1,7 +1,11 @@
+use std::env;
+
 async fn get_request_body() -> String {
     let client = reqwest::Client::builder().build().unwrap();
 
-    let url = format!("https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/places/near-point?x=174.778&y=-41.292&pageSize=20&f=pjson&token=TOKEN");
+    let token = env::var("TOKEN").unwrap();
+
+    let url = format!("https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/places/near-point?x=174.778&y=-41.292&pageSize=20&f=pjson&token={token}");
 
     let request = client.request(reqwest::Method::GET, url);
 
