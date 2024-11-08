@@ -1,5 +1,5 @@
 # Introduction
-Unlocking the Power of ArcGIS Location Platform Using Rust
+Unlocking the Power of ArcGIS Location Platform Using Rust - under active development
 
 This repository contains code and resources for leveraging [ArcGIS Location Platform](https://location.arcgis.com/) with the [Rust](https://www.rust-lang.org/) programming language. We provide supplemental source code, samples, common practices, and resources supporting our technical sessions.
 
