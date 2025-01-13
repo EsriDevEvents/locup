@@ -7,6 +7,9 @@ description = "The elevation service is a location service which returns TopoBat
 license = "Unlicense"
 edition = "2021"
 
+[dev-dependencies]
+tokio = { version = ">=1.4", features = ["full"] }
+
 [dependencies]
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
