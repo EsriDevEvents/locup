@@ -1,0 +1,14 @@
+# ElevationAtManyPointsPostRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**token** | Option<**String**> | The authentication token, used to access the elevation service.  The `token` parameter can be either an API Key or short-lived token.  Alternatively, you can supply a token in the request header with one of the following keys using the \"Bearer\" scheme:  - `Authorization: Bearer <YOUR_TOKEN>` - `X-Esri-Authorization: Bearer <YOUR_TOKEN>`  The provided `token` must be created from an ArcGIS Location Platform account and have the necessary `premium:user:elevation` privilege to use the elevation service.  **Developer guide**: To learn more, go to [Security and authentication](https://developers.arcgis.com/documentation/security-and-authentication/).  | [optional]
+**relative_to** | Option<**String**> | The reference position (datum) from which to measure elevation. The valid values are: - meanSeaLevel: The elevation above or below the WGS84 geoid reference surface, which is approximately the mean sea level.                 It takes into account the local variations in gravity and provides a consistent vertical reference. - ellipsoid: Ellipsoidal height is measured with respect to an ellipsoid, which is a mathematical model that approximates the shape of the Earth.               It does not consider local variations in gravity and is commonly used in GPS positioning.  | [optional][default to MeanSeaLevel]
+**f** | Option<[**models::Format**](Format.md)> |  | [optional]
+**coordinates** | [**Vec<Vec<f32>>**](Vec.md) | Array of (longitude, latitude) pairs in the WGS84 spatial reference. Maximum size of 100 coordinates. The order of each pair must be   - longitude in the range `-179.99` to `179.99` representing the east/west or x-axis   - latitude in the range `-85.05` to `85.05` representing the north/south or y-axis  For example: `[[31.134167, 29.979167], [31.130833, 29.976111], [31.128333, 29.9725]]`  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
