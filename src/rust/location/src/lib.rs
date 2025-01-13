@@ -27,10 +27,11 @@ mod tests {
         // Create a default configuration
         let mut configuration = apis::configuration::Configuration::default();
         
-        // Modify the API key
+        // Define the API key
         configuration.api_key = Some(apis::configuration::ApiKey {
             prefix: None,
-            key: "<Not-an-API-key!>".to_string(),
+            //key: "<Not-an-API-key!>".to_string(),
+            key: env::var("arcgis_api_key").expect("arcgis_api_key not set!")
         });
 
         // Make it fail!
