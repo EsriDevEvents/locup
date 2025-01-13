@@ -3,8 +3,6 @@ name = "elevation"
 version = "0.2.1"
 authors = ["OpenAPI Generator team and contributors"]
 description = "The elevation service is a location service which returns TopoBathy elevation values that combine topography (land elevation) and bathymetry (water depths)."
-# Override this license by providing a License Object in the OpenAPI.
-license = "Unlicense"
 edition = "2021"
 
 [dev-dependencies]
