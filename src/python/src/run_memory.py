@@ -29,4 +29,4 @@ if __name__ == '__main__':
         print(f"Point(x={point.x}, y={point.y})")
 
     # Assert
-    assert sample_points[0].x == 1 and sample_points[0] == 1, 'The first point was modified!'
+    assert sample_points[0].x == 1 and sample_points[0].y == 1, 'The first point was modified!'
